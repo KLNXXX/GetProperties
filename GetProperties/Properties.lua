@@ -3,6 +3,9 @@
 --- Property mapper
 --- Since Roblox does not have their own GetProperties method
 
+--@Services
+local HttpService = game:GetService("HttpService")
+
 --@Libraries
 local Modules = script.Parent
 local Signal = require(script:WaitForChild('FastSignal')); -- pobammer's FastSignal
@@ -82,8 +85,8 @@ function PropertyModule:Init()
 	coroutine.wrap(function()
 		--- Loading the current API classes actually takes quite a bit
 		
-		local studioVersion = fetch:GetAsync("http://setup.roblox.com/versionQTStudio").body
-		local robloxApiDump = fetch.Decode(fetch:GetAsync("http://setup.roblox.com/"..studioVersion.."-API-Dump.json").body)
+		local studioVersion = fetch:GetAsync("http://setup.roblox.com/versionQTStudio").body -- You can use "Get" if you don't have GetAsync
+		local robloxApiDump = HttpService:JSONDecode(fetch:GetAsync("http://setup.roblox.com/"..studioVersion.."-API-Dump.json").body)
 		local propertyMap = robloxApiDump or error("Properties API did not load correctly")
 		
 		self.propertyMap = propertyMap
