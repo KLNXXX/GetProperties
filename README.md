@@ -13,4 +13,4 @@ The explorer hierarchy should be ordered like so
 ### Examples
 Examples can be found [here](https://github.com/KLNXXX/GetProperties/tree/main/Examples)
 
-The average time to return a property map is around 0.03 seconds
+The average time to return a property map is around 0.0035 seconds
