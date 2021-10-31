@@ -2,6 +2,8 @@
 A small module that allows for one to retrieve all properties of a given instance.
 Prior programming experience is highly recommended to set up the module, as it has quite a few dependencies.
 
+This module is meant for **personal** use only, as the setup process is quite complicated.
+
 ### Dependencies
 Since https://rprxy.xyz was discontinued, you must create your own ProxyService.
 - An open source version can be found here: https://github.com/sentanos/ProxyService
